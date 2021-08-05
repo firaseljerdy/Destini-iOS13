@@ -14,12 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice2Button: UIButton!
     
     var storyBrain = StoryBrain()
-    var destinations: [Int] = []
     var currentStoryIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(currentStoryIndex)
         currentStoryIndex = storyBrain.getCurrentStoryIndex()
         fetchStoryData(story: currentStoryIndex)
     }
@@ -27,9 +25,8 @@ class ViewController: UIViewController {
     func fetchStoryData(story: Int) {
         
         storyLabel.text = storyBrain.getStoryText(index: story)
-        let choices = [storyBrain.getStoryChoices(index: story).0, storyBrain.getStoryChoices(index: story).1]
-        
-        destinations = [storyBrain.getCurrentStoryDestinations(index: story).0, storyBrain.getCurrentStoryDestinations(index: story).1]
+        let storyChoices = storyBrain.getStoryChoices(index: story)
+        let choices = [storyChoices.0, storyChoices.1]
         
         choice1Button.setTitle(choices[0], for: .normal)
         choice2Button.setTitle(choices[1], for: .normal)

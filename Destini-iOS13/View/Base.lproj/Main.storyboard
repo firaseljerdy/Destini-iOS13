@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-Xv-zfI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-Xv-zfI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b0T-eg-tGE">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
@@ -80,9 +79,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="AVD-Xv-zfI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0ZG-36-9nV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b0T-eg-tGE" secondAttribute="trailing" id="1lZ-W6-uyL"/>
+                            <constraint firstAttribute="bottom" secondItem="AVD-Xv-zfI" secondAttribute="bottom" id="5H2-0O-ngb"/>
                             <constraint firstItem="b0T-eg-tGE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rb1-bv-uBs"/>
+                            <constraint firstItem="AVD-Xv-zfI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="S29-QW-fAv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b0T-eg-tGE" secondAttribute="bottom" id="YbR-3B-JmC"/>
+                            <constraint firstItem="AVD-Xv-zfI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZwW-vZ-nva"/>
                             <constraint firstItem="b0T-eg-tGE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ivh-d2-Ivg"/>
                         </constraints>
                     </view>

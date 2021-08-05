@@ -64,18 +64,12 @@ struct StoryBrain {
         return (story[index].choice1, story[index].choice2)
     }
     
-    func getCurrentStoryDestinations(index: Int) -> (Int, Int) {
-        return (story[index].choice1Destination, story[index].choice1Destination)
-    }
-    
     mutating func progressStory(storyIndex: Int, userAnswer: String) {
         if userAnswer == story[storyIndex].choice1 {
             currentStoryIndex = story[storyIndex].choice1Destination
         } else {
             currentStoryIndex = story[storyIndex].choice2Destination
         }
-        
-        print(currentStoryIndex)
     }
     
     func getCurrentStoryIndex() -> Int {
